@@ -29,10 +29,10 @@ const int TRIG_PIN = A5;
 const int ECHO_PIN = A4;
 const int TRIG_PIN_TWO = 12;
 const int ECHO_PIN_TWO = 13;
-const float i = 2;
-float r = 0;
-float t;
-float h;
+const float i = 2; // Distance between the two sensors
+float r = 0; // Angle to turn
+float t; // Distance measured by right sensor
+float h; // Distance measured by left sensor
 
 void turny(float degree, boolean left) {
   if (left) {
@@ -90,7 +90,7 @@ void setup() {
   digitalWrite(TRIG_PIN, LOW);
   pinMode(TRIG_PIN_TWO, OUTPUT);
   digitalWrite(TRIG_PIN_TWO, LOW);
-  pinMode(IN1,OUTPUT);//before useing io pin, pin mode must be set first 
+  pinMode(IN1,OUTPUT); 
   pinMode(IN2,OUTPUT);
   pinMode(IN3,OUTPUT);
   pinMode(IN4,OUTPUT);
